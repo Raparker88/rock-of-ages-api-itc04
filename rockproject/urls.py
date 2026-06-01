@@ -14,6 +14,6 @@ urlpatterns = [
     path('', include(router.urls)),
     path('register', register_user),
     path('login', login_user),
+    path('health', health_check),
     path('admin/', admin.site.urls),
-    path('health', health_check)
 ]
