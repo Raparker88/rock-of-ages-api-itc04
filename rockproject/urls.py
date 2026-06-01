@@ -3,7 +3,7 @@ from django.urls import include, path
 from rest_framework import routers
 from rockapi.views import (
     register_user, login_user,
-    TypeView, RockView
+    TypeView, RockView, health_check
 )
 
 router = routers.DefaultRouter(trailing_slash=False)
@@ -15,4 +15,5 @@ urlpatterns = [
     path('register', register_user),
     path('login', login_user),
     path('admin/', admin.site.urls),
+    path('health', health_check)
 ]
